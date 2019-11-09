@@ -17,6 +17,7 @@ function out = InRadius(time_series, lag)
 				r(i)=2*(D(i))/x(i)+y(i)+z(i));
 			end
 	end
+% Any analysis can be done with the resulting signal here.
 % Absolute Derivative calculation for the InRadius sequence.
 radchng=abs(r(1:lag:end-1)-r(2:lag:end));
-out=((radchng));
+out=mean(radchng);
