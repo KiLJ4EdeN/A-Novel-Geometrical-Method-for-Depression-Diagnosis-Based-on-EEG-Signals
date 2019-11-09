@@ -14,7 +14,7 @@ function out = InRadius(time_series, lag)
 			if x(i)+y(i)+z(i)==0
 				r(i)=0;
 			else
-				r(i)=2*(D(i))/x(i)+y(i)+z(i));
+				r(i)=2*(D(i))/(x(i)+y(i)+z(i));
 			end
 	end
 % Any analysis can be done with the resulting signal here.
