@@ -2,11 +2,11 @@ function out = InRadius(time_series, lag)
 % lag should be chosen based on sampling rate and time_series data Typical values are 1:5 
 % Looping through all the samples
 	for i=1:length(time_series)-5
- % Triangle area calculation for six consecutive samples
- % With D representing the area for each triangle
+ 		% Triangle area calculation for six consecutive samples
+ 		% With D representing the area for each triangle
 		D(i)=polyarea([time_series(i),time_series(i+2),time_series(i+4)],[time_series(i+1),time_series(i+3),time_series(i+5)]);
-% Triangle side calculation
-% With x, y, z denoting each triangle side
+		% Triangle side calculation
+		% With x, y, z denoting each triangle side
 		x(i)=sqrt((time_series(i)-time_series(i+2))^2+(time_series(i+1)-time_series(i+3))^2);
 		y(i)=sqrt((time_series(i)-time_series(i+4))^2+(time_series(i+1)-time_series(i+5))^2);
 		z(i)=sqrt((time_series(i+2)-time_series(i+4))^2+(time_series(i+3)-time_series(i+5))^2);
