@@ -1,5 +1,5 @@
 % InRadius 
-% InRadius is a novel complexity measure based on the first degree of a geometrical differentiation from the input signal.
+% InRadius is a novel complexity measure based on a geometrical differentiation from the input signal.
 % Usages: capture variability, long term correlations with different lag numbers.
 % Comparable to entropy measures such as sampen and apen, and other distance based entropy techniques. 
 % Based on poincare recurrence plots.
