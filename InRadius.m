@@ -21,7 +21,7 @@ And computing the InRadius size for each triangle
 function [out radchng r] = InRadius(time_series, lag)
 % lag should be chosen based on sampling rate and time_series data Typical values are 1:5 / higher than 6 lags will have data loss
 	if nargin<2 || nargin>2 
-		fprintf('WARNING: 2 input arguments: time_series and lag are needed.\n Type help InRadius for more information.\n')
+		fprintf('WARNING: 2 input arguments: time_series and lag are needed.\n refer to InRadius comments for more information.\n')
 	end
 	if ~isvector(time_series)
 		error('time_series must be a 1*N vector.')
