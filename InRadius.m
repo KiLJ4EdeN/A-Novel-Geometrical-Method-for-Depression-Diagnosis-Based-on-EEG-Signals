@@ -1,6 +1,7 @@
 % InRadius 
-%{This function captures the variability in the time_series by decomposing each 6 consecutive data points into a triangle,
-And computing the InRadius size for each triangle %}
+%{
+This function captures the variability in the time_series by decomposing each 6 consecutive data points into a triangle,
+And computing the InRadius size for each triangle
 %
 %
 %
@@ -13,7 +14,7 @@ lag : distance between chosen points for triangle edges%}
 % IR = InRadius(time_series);
 % note that this results in the average of the in radius differentiaion
 % to use the Radius changes and Radius size as out puts do [out radchng r] in which radchng and r denote Radius changes and size respectively.
-
+%}
 
 
 
