@@ -1,4 +1,4 @@
-% InRadius
+% InRadius 
 %{This function captures the variability in the time_series by decomposing each 6 consecutive data points into a triangle,
 And computing the InRadius size for each triangle %}
 %
