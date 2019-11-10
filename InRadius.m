@@ -27,6 +27,7 @@ function [out radchng r] = InRadius(time_series, lag)
 	end
 	if lag>length(time_series)
 		error('lag must be smaller than data size.')
+	end
 	% Looping through all the samples
 	for i=1:length(time_series)-5
  		% Triangle area calculation for six consecutive samples
