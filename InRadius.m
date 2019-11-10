@@ -1,6 +1,33 @@
-function out = InRadius(time_series, lag)
-% lag should be chosen based on sampling rate and time_series data Typical values are 1:5 
-% Looping through all the samples
+% InRadius
+%{This function captures the variability in the time_series by decomposing each 6 consecutive data points into a triangle,
+And computing the InRadius size for each triangle %}
+%
+%
+%
+%
+%{Inputs :
+time_series : 1*N column vector 
+lag : distance between chosen points for triangle edges%}
+% example usage :
+% time_series = rand(1,500);
+% IR = InRadius(time_series);
+% note that this results in the average of the in radius differentiaion
+% to use the Radius changes and Radius size as out puts do [out radchng r] in which radchng and r denote Radius changes and size respectively.
+
+
+
+
+function [out radchng r] = InRadius(time_series, lag)
+% lag should be chosen based on sampling rate and time_series data Typical values are 1:5 / higher than 6 lags will have data loss
+	if nargin>2 
+		fprintf('WARNING: 2 input arguments: time_series and lag are needed.\n Type help InRadius for more information.\n')
+	end
+	if ~isvector(time_series)
+		error('time_series must be a 1*N vector.')
+	end
+	if lag>length(time_series)
+		error('lag must be smaller than data size.')
+	% Looping through all the samples
 	for i=1:length(time_series)-5
  		% Triangle area calculation for six consecutive samples
  		% With D representing the area for each triangle
