@@ -1,4 +1,24 @@
-%
+% CCdis 
+% Centroid to Centroid distance is a new complexity measure based on a triangle center differentiation from the input signal.
+% Usages: capture variability, long term correlations with different lag numbers.
+% Comparable to entropy measures such as sampen and apen, and other distance based entropy techniques. 
+% Based on poincare recurrence plots.
+%{
+This function captures the variability in the time_series by decomposing each 6 consecutive data points into a triangle,
+And computing the distances between each pair of Centroids.
+ %
+ %	
+ %
+ %
+ Inputs :
+ time_series : 1*N column vector.
+ lag : distance between chosen points for triangle edges.
+ example usage :
+ time_series = rand(1,500);
+ D = CCdis(time_series);
+ note that this results in the average of the in dis differentiaion
+ to use the Radius changes and Radius size as out puts do [out radchng r] in which radchng and r denote Radius changes and size respectively.
+%}
 
 
 
