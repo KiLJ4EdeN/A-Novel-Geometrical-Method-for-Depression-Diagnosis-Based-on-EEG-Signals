@@ -54,3 +54,4 @@ function [out radchng r] = InRadius(time_series, lag)
 % Absolute Derivative calculation for the InRadius sequence.
 radchng=abs(r(1:lag:end-1)-r(2:lag:end));
 out=mean(radchng);
+end
