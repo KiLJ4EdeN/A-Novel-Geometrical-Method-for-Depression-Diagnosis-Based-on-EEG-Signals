@@ -1,3 +1,8 @@
+%
+
+
+
+
 function [out D]=CCdis(time_series, lag)
     % looping the signal to exctract centroids.
     for k=1:length(time_series)-5
@@ -5,7 +10,7 @@ function [out D]=CCdis(time_series, lag)
 		cx(k)=mean([time_series(k),time_series(k+2),time_series(k+4)]);
 		cy(k)=mean([time_series(k+1),time_series(k+3),time_series(k+5)]);
     end
-    % choosing the triangle centers that meet the lag criteria.
+    % extracting the triangle centers that meet the lag criteria.
     cx=cx(1:lag:end);
     cy=cy(1:lag:end);
     % measuring the distance between two consecutive triangle centers.
