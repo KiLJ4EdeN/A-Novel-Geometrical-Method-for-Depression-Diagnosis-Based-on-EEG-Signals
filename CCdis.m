@@ -16,8 +16,8 @@ And computing the distances between each pair of Centroids.
  example usage :
  time_series = rand(1,500);
  D = CCdis(time_series);
- note that this results in the average of the in dis differentiaion
- to use the Radius changes and Radius size as out puts do [out radchng r] in which radchng and r denote Radius changes and size respectively.
+ note that this results in a differentiation from the average of the in distances between centroids.
+ to use the Centroid distance variability sequence a second output D must be specified.
 %}
 
 
