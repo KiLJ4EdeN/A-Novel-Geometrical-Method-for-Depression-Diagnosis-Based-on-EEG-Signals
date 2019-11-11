@@ -23,6 +23,7 @@ And computing the distances between each pair of Centroids.
 
 
 
+
 function [out D]=CCdis(time_series, lag)
     % looping the signal to exctract centroids.
     for k=1:length(time_series)-5
