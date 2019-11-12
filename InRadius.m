@@ -28,13 +28,13 @@ function [out rad_der r] = InRadius(time_series, lag)
 
 	% Parameter control.
 	
-	if nargin<2 || nargin>2 
+	if nargin < 2 || nargin > 2 
 		fprintf('WARNING: 2 input arguments: time_series and lag are needed.\n refer to InRadius comments for more information.\n')
 	end
-	if ~isvector(time_series)
+	if ~ isvector(time_series)
 		error('time_series must be a 1*N vector.')
 	end
-	if lag>length(time_series)
+	if lag > length(time_series)
 		error('lag must be smaller than data size.')
 	end
 	% Looping through all the samples.
