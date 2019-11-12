@@ -31,7 +31,7 @@ function [out D]=CCdis(time_series, lag)
     	if nargin < 2 || nargin > 2 
 		fprintf('WARNING: 2 input arguments: time_series and lag are needed.\n refer to InRadius comments for more information.\n')
 	end
-	if ~isvector(time_series)
+	if ~ isvector(time_series)
 		error('time_series must be a 1*N vector.')
 	end
 	if lag > length(time_series)
@@ -48,16 +48,16 @@ function [out D]=CCdis(time_series, lag)
 	    end
 	    % extracting the triangle centers that meet the lag criteria.
 	    
-	    cx=cx(1:lag:end);
-	    cy=cy(1:lag:end);
+	    cx = cx(1:lag:end);
+	    cy = cy(1:lag:end);
 	    % measuring the distance between two consecutive triangle centers.
 	    % note: any type of desire distance can be measured
 	    % euclidean chebychev mikowski cityblock etc.
 	    
-	    D=sqrt((cx(2:end)-cx(1:end-1)).^2+(cy(2:end)-cy(1:end-1)).^2);
+	    D  sqrt((cx(2:end)-cx(1:end-1)).^2 + (cy(2:end)-cy(1:end-1)).^2);
 	    % the triangle distance vector can be used to your needs.
-	    % here the mean is calculated as a feature.
+	    % here the mean of the derivative is calculated as a feature.
 	    
-	    out=mean(abs(D(1:lag:end-1)-D(2:lag:end)));
+	    out = mean(abs(D(1:lag:end-1)-D(2:lag:end)));
 end
     
