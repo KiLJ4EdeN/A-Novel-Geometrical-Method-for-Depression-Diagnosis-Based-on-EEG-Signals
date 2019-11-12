@@ -43,7 +43,7 @@ function [out radchng r] = InRadius(time_series, lag)
  		% Triangle area calculation for six consecutive samples.
  		% With D representing the area for each triangle.
 		
-		D(i)=polyarea([time_series(i),time_series(i+2),time_series(i+4)],[time_series(i+1),time_series(i+3),time_series(i+5)]);
+		D(i)=polyarea([time_series(i), time_series(i+2), time_series(i+4)], [time_series(i+1), time_series(i+3), time_series(i+5)]);
 		% Triangle side calculation.
 		% With x, y, z denoting each triangle side.
 		
