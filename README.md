@@ -1,6 +1,13 @@
 # A-Novel-Geometrical-Method-for-Depression-Diagnosis-Based-on-EEG-Signals
 Source codes for the "paper A Novel Geometrical Method for Depression Diagnosis Based on EEG Signals"
 
+To use:
+1. Clone the repo
+
+2. Add the .m files to your directory
+
+3. Call the functions on your time_series data.
+
 
 example usage of the codes:
 
