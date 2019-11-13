@@ -41,9 +41,9 @@ function [out rad_der r] = InRadius(time_series, lag)
 	
 	for i = 1:length(time_series)-5
  		% Triangle area calculation for six consecutive samples.
- 		% With D representing the area for each triangle.
+ 		% With A representing the area for each triangle.
 		
-		D(i) = polyarea([time_series(i), time_series(i+2), time_series(i+4)], [time_series(i+1), time_series(i+3), time_series(i+5)]);
+		A(i) = polyarea([time_series(i), time_series(i+2), time_series(i+4)], [time_series(i+1), time_series(i+3), time_series(i+5)]);
 		% Triangle side calculation.
 		% With x, y, z denoting each triangle side.
 		
@@ -59,7 +59,7 @@ function [out rad_der r] = InRadius(time_series, lag)
 			
 			% Incenter Radius calculation with one of the popular formulas.
 			
-				r(i) = 2 * (D(i)) / (x(i) + y(i) + z(i));
+				r(i) = 2 * (A(i)) / (x(i) + y(i) + z(i));
 			end
 	end
 % Any analysis can be done with the resulting signal here.
