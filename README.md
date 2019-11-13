@@ -5,9 +5,13 @@ Source codes for the "paper A Novel Geometrical Method for Depression Diagnosis 
 example usage of the codes:
 
  time_series = rand(1,500);
+ 
  [out rad_der r] = InRadius(time_series);
+ 
  disp(out)
+ 
  plot(r)
+ 
  figure;plot(rd)
  
 
