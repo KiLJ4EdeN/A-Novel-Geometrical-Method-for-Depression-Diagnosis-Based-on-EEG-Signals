@@ -24,7 +24,7 @@ And computing the distances between each pair of Centroids.
 
 
 
-function [out D]=CCdis(time_series, lag)
+function [out CCseq]=CCdis(time_series, lag)
 
 	% Parameter Control
     
@@ -54,7 +54,7 @@ function [out D]=CCdis(time_series, lag)
 	    % note: any type of desire distance can be measured
 	    % euclidean chebychev mikowski cityblock etc.
 	    
-	    D  sqrt((cx(2:end)-cx(1:end-1)).^2 + (cy(2:end)-cy(1:end-1)).^2);
+	    CCseq = sqrt((cx(2:end)-cx(1:end-1)).^2 + (cy(2:end)-cy(1:end-1)).^2);
 	    % the triangle distance vector can be used to your needs.
 	    % here the mean of the derivative is calculated as a feature.
 	    
