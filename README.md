@@ -4,9 +4,9 @@ Source codes for the "paper A Novel Geometrical Method for Depression Diagnosis 
 
 example usage of the codes:
 
- time_series = rand(1,500);
+ time_series = rand(1, 500);
  
- [out rad_der r] = InRadius(time_series,1);
+ [out rad_der r] = InRadius(time_series, 1);
  
  disp(out)
  
@@ -16,15 +16,23 @@ example usage of the codes:
  
  %%%%%%%%%%%%%%%
  
- time_series = rand(1,500);
+ time_series = rand(1, 500);
  
- [out D] = Cen45(time_series,1);
+ [out Censeq] = Cen45(time_series, 1);
  
  disp(out)
  
  plot(D)
 
  %%%%%%%%%%%%%%%
+ 
+ time_series = rand(1,500);
+ 
+ [out CCseq] = CCdis(time_series, 1)
+ 
+ disp(out)
+ 
+ plot(CCseq)
  
  
 a brief abstract form the study:
