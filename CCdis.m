@@ -14,8 +14,8 @@ And computing the distances between each pair of Centroids.
  time_series : 1*N column vector.
  lag : distance between chosen points for triangle edges.
  example usage :
- time_series = rand(1,500);
- D = CCdis(time_series);
+ time_series = rand(1, 500);
+ D = CCdis(time_series, 1);
  note that this results in a differentiation from the average of the in distances between centroids.
  to use the Centroid distance variability sequence a second output D must be specified.
 %}
