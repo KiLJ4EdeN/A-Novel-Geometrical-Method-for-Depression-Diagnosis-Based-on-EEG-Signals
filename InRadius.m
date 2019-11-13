@@ -15,7 +15,7 @@ And computing the InRadius size for each triangle.
  lag : distance between chosen points for triangle edges.
  example usage :
  time_series = rand(1,500);
- [out rad_der r] = InRadius(time_series);
+ [out rad_der r] = InRadius(time_series, 1);
  note that this results in the average of the in radius differentiaion
  to use the Radius changes and Radius size as out puts do [out rad_der r] in which rad_der and r denote Radius changes and size respectively.
 %}
