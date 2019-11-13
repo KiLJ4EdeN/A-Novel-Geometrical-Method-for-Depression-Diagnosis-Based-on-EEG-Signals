@@ -15,7 +15,7 @@ And computing the the shortest distances between each triangle center and the x=
  lag : distance between chosen points for triangle edges.
  example usage :
  time_series = rand(1, 500);
- [out D] = Cen45(time_series, 1);
+ [out Censeq] = Cen45(time_series, 1);
  plot(D)
  out
  note that this results in a differentiation from the average of the in distances between centroids.
@@ -28,7 +28,7 @@ And computing the the shortest distances between each triangle center and the x=
 
 
 
-function [out D] = Cen45(time_series, lag)
+function [out Censeq] = Cen45(time_series, lag)
 
     for k=1:length(time_series)-5
 cx(k)=mean([ld3(k),ld3(k+2),ld3(k+4)]);
