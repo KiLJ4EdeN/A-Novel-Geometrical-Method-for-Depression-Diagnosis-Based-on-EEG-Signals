@@ -30,11 +30,33 @@ And computing the the shortest distances between each triangle center and the x=
 
 function [out Censeq] = Cen45(time_series, lag)
 
-    for k=1:length(time_series)-5
-cx(k)=mean([ld3(k),ld3(k+2),ld3(k+4)]);
-cy(k)=mean([ld3(k+1),ld3(k+3),ld3(k+5)]);
-D(k)=(abs(cx(k)-cy(k)))/sqrt(2);
-D=D(1:lag:end);
-    end
-    out=mean(abs(abi(1:end-5)-abi(6:end)));
+        % Parameter Control
+    
+    	   if nargin < 2 || nargin > 2 
+		              fprintf('WARNING: 2 input arguments: time_series and lag are needed.\n refer to InRadius comments for more information.\n')
+	       end
+        if ~ isvector(time_series)
+                error('time_series must be a 1*N vector.')
+        end
+        if lag > length(time_series)
+                error('lag must be smaller than data size.')
+        end
+
+          % looping through the signal elements.
+           for k=1:length(time_series)-5
+           		       	% calculating the centroid coordinates for every triangle.
+			                  % with cx and cy representing the centroids x and y coords respectiely.
+                     
+                     cx(k)=mean([ld3(k),ld3(k+2),ld3(k+4)]);
+                     cy(k)=mean([ld3(k+1),ld3(k+3),ld3(k+5)]);
+            
+           end
+           
+           % extracting the triangles that meet the lag critetia.
+           
+           D=D(1:lag:end);
+           % measuring the shortest distance between the triangle centroid and the x=y line.
+           D(k)=(abs(cx(k)-cy(k)))/sqrt(2);
+       
+           out=mean(abs(abi(1:end-5)-abi(6:end)));
 end
