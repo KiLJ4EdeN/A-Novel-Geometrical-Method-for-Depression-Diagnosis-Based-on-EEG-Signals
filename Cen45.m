@@ -56,7 +56,7 @@ function [out Censeq] = Cen45(time_series, lag)
            
            D = D(1:lag:end);
            % measuring the shortest distance between the triangle centroid and the x=y line.
-           D(k) = (abs(cx(k) - cy(k)))/sqrt(2);
+           D(k) = (abs(cx(k) - cy(k))) / sqrt(2);
        
            out = mean(abs(D(1:end-5) - D(6:end)));
 end
