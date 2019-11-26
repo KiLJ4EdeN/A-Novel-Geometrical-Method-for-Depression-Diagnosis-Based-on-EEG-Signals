@@ -5,15 +5,15 @@
 % Based on poincare recurrence plots.
 %{
 This function captures the variability in the time_series by decomposing each 6 consecutive data points into a triangle,
-And computing the the shortest distances between each triangle center and the x=y line.
+And computing the the shortest distances between each triangle center and the x = y line.
  %
  %	
  %
  %
  Inputs :
- time_series : 1*N column vector.
- lag : distance between chosen points for triangle edges.
- example usage :
+ time_series: 1*N column vector.
+ lag: distance between chosen points for triangle edges.
+ example usage:
  time_series = rand(1, 500);
  [out Censeq] = Cen45(time_series, 1);
  plot(D)
