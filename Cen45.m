@@ -36,7 +36,7 @@ function [out Censeq] = Cen45(time_series, lag)
 		fprintf('WARNING: 2 input arguments: time_series and lag are needed.\n refer to InRadius comments for more information.\n')
 	end
         if ~ isvector(time_series)
-                error('time_series must be a 1*N vector.')
+                error('time_series must be a 1*N column vector.')
         end
         if lag > length(time_series)
                 error('lag must be smaller than data size.')
