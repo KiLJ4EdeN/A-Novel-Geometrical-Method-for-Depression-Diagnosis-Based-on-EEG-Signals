@@ -11,7 +11,7 @@ And computing the the shortest distances between each triangle center and the x 
  %
  %
  Inputs :
- time_series: 1*N column vector.
+ time_series: 1 * N column vector.
  lag: distance between chosen points for triangle edges.
  example usage:
  time_series = rand(1, 500);
@@ -57,6 +57,6 @@ function [out Censeq] = Cen45(time_series, lag)
            D = D(1:lag:end);
            % measuring the shortest distance between the triangle centroid and the x=y line.
            D(k) = (abs(cx(k) - cy(k))) / sqrt(2);
-       
-           out = mean(abs(D(1:end-5) - D(6:end)));
+       	   % difference degree can be specified here.
+           out = mean(abs(D(1:end-1) - D(2:end)));
 end
