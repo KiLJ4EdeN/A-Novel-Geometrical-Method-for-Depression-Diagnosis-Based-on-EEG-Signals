@@ -28,15 +28,15 @@ function [out CCseq]=CCdis(time_series, lag)
 
 	% Parameter Control
     
-    	if nargin < 2 || nargin > 2 
-		fprintf('WARNING: 2 input arguments: time_series and lag are needed.\n refer to InRadius comments for more information.\n')
-	
-	elseif ~ isvector(time_series)
-		error('time_series must be a 1 * N vector.')
-	
-	elseif lag > length(time_series)
-		error('lag must be smaller than data size.')
-	end
+    if nargin < 2 || nargin > 2 
+        fprintf('WARNING: 2 input arguments: time_series and lag are needed.\n refer to InRadius comments for more information.\n')
+
+    elseif ~ isvector(time_series)
+        error('time_series must be a 1 * N vector.')
+
+    elseif lag > length(time_series)
+        error('lag must be smaller than data size.')
+    end
 	    % Looping the signal samples to exctract centroids.
 	    
 	    for k = 1:length(time_series) - 5
@@ -58,6 +58,7 @@ function [out CCseq]=CCdis(time_series, lag)
 	    % the triangle distance vector can be used to your needs.
 	    % here the mean of the derivative is calculated as a feature.
 	    
-	    out = mean(abs(D(1:lag:end-1)-D(2:lag:end)));
+	    out = mean(abs(CCseq(1:lag:end-1)-CCseq(2:lag:end)));
 end
     
+
