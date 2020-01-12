@@ -44,19 +44,19 @@ function [out Censeq] = Cen45(time_series, lag)
 
           % looping through the signal elements.
            for k = 1:length(time_series)-5
-           		       	% calculating the centroid coordinates for every triangle.
-			                  % with cx and cy representing the centroids x and y coords respectiely.
+           		     % calculating the centroid coordinates for every triangle.
+			         % with cx and cy representing the centroids x and y coords respectiely.
                      
                      cx(k) = mean([time_series(k), time_series(k+2), time_series(k+4)]);
                      cy(k) = mean([time_series(k+1), time_series(k+3), time_series(k+5)]);
+                     % measuring t shortest distance between the triangle centroid and the x=y line
+                     Censeq(k) = (abs(cx(k) - cy(k))) / sqrt(2);
             
            end
            
            % extracting the triangles that meet the lag critetia.
-           
-           D = D(1:lag:end);
-           % measuring the shortest distance between the triangle centroid and the x=y line.
-           D(k) = (abs(cx(k) - cy(k))) / sqrt(2);
+           % measuring t shortest distance between the triangle centroid and the x=y line.he
+           Censeq = Censeq(1:lag:end);
        	   % difference degree can be specified here.
-           out = mean(abs(D(1:end-1) - D(2:end)));
+           out = mean(abs(Censeq(1:end-1) - Censeq(2:end)));
 end
