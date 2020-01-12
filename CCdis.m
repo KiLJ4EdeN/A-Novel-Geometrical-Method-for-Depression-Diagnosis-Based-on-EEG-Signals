@@ -30,11 +30,11 @@ function [out CCseq]=CCdis(time_series, lag)
     
     	if nargin < 2 || nargin > 2 
 		fprintf('WARNING: 2 input arguments: time_series and lag are needed.\n refer to InRadius comments for more information.\n')
-	end
-	if ~ isvector(time_series)
+	
+	elseif ~ isvector(time_series)
 		error('time_series must be a 1 * N vector.')
-	end
-	if lag > length(time_series)
+	
+	elseif lag > length(time_series)
 		error('lag must be smaller than data size.')
 	end
 	    % Looping the signal samples to exctract centroids.
