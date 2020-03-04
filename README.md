@@ -11,7 +11,7 @@ Source codes for the "paper A Novel Geometrical Method for Depression Diagnosis 
 
 ## example usage of the codes:
 
-'''matlab
+```matlab
  time_series = rand(1, 500);
  
  [out rad_der r] = InRadius(time_series, 1);
@@ -21,7 +21,7 @@ Source codes for the "paper A Novel Geometrical Method for Depression Diagnosis 
  plot(r)
  
  figure;plot(rd)
-'''
+```
  %%%%%%%%%%%%%%%
  
  time_series = rand(1, 500);
