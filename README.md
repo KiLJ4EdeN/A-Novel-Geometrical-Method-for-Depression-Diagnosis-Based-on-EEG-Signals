@@ -23,7 +23,7 @@ Source codes for the "paper A Novel Geometrical Method for Depression Diagnosis 
  figure;plot(rd)
 ```
  %%%%%%%%%%%%%%%
- 
+ ```matlab
  time_series = rand(1, 500);
  
  [out Censeq] = Cen45(time_series, 1);
@@ -31,9 +31,9 @@ Source codes for the "paper A Novel Geometrical Method for Depression Diagnosis 
  disp(out)
  
  plot(D)
-
+```
  %%%%%%%%%%%%%%%
- 
+ ```matlab
  time_series = rand(1,500);
  
  [out CCseq] = CCdis(time_series, 1)
@@ -42,7 +42,7 @@ Source codes for the "paper A Novel Geometrical Method for Depression Diagnosis 
  disp(out)
  
  plot(CCseq)
- 
+ ```
  %%%%%%%%%%%%%%
  
 ### a brief abstract form the study:
