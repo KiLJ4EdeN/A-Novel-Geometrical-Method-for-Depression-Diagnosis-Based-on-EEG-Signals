@@ -1,6 +1,7 @@
-import numpy as np
 # python implementation of Cen45
 # please kindly cite the article if you find these methods useful to your application.
+import numpy as np
+
 def Cen45(arr, lag=1):
   N = len(arr) - 6
   cx = np.zeros(N)
