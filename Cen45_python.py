@@ -1,3 +1,4 @@
+import numpy as np
 # python implementation of Cen45
 # please kindly cite the article if you find these methods useful to your application.
 def Cen45(arr, lag=1):
