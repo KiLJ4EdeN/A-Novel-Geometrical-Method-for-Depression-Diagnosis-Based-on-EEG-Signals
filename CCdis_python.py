@@ -8,7 +8,6 @@ def CCdis(arr, lag=1):
   cy = np.zeros(N)
   i = 0
   while i <= N:
-    print(i)
     cx[i] = np.mean([arr[i], arr[i+1], arr[i+2]])
     cy[i] = np.mean([arr[i+1], arr[i+3], arr[i+5]])
     i += lag
