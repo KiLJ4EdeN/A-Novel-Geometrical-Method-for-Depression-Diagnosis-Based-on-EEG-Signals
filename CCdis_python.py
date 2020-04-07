@@ -1,7 +1,9 @@
 # python implementation of CCdis
 # please kindly cite the article if you find these methods useful to your application.
+import numpy as np
+
 def CCdis(arr, lag=1):
-  N = len(arr) - 5
+  N = len(arr) - 6
   cx = np.zeros(N)
   cy = np.zeros(N)
   i = 0
@@ -14,4 +16,4 @@ def CCdis(arr, lag=1):
   output = np.mean(CCseq)
   return CCseq, output
 
-CCseq, output = CCdis(y, 12)
+# example usage: CCseq, output = CCdis(arr, 12)
