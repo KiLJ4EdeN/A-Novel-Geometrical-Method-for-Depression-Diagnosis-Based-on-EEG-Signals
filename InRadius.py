@@ -12,7 +12,6 @@ def in_radius(signal, lag=6):
         else:
             s = (a + b + c) / 2
             area = (s * (s - a) * (s - b) * (s - c))
-            # change this later
             area = sqrt(area)
             r.append((2 * area) / (a + b + c))
     return r[::lag]
